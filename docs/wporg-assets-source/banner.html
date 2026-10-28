@@ -1,0 +1,54 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><style>
+html,body{margin:0;width:772px;height:250px;overflow:hidden}
+body{background:linear-gradient(160deg,#2f5fd0 0%,#1c3a91 100%);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:#fff;position:relative}
+.rows{position:absolute;right:-40px;top:-10px;width:330px;opacity:.14}
+.row{height:22px;margin:0 0 14px;border-radius:11px;background:#fff}
+.icon{position:absolute;left:44px;top:50px;filter:drop-shadow(0 8px 18px rgba(0,0,0,.25))}
+.text{position:absolute;left:228px;top:52px;right:24px}
+h1{margin:0;font-size:56px;line-height:1;font-weight:800;letter-spacing:-1px}
+.sub{margin:10px 0 0;font-size:21px;white-space:nowrap;font-weight:400;color:#dbe4ff}
+.chips{margin:20px 0 0;font-size:17px;font-weight:600;color:#6ee7a8;letter-spacing:.2px}
+.chips span{margin:0 8px;color:#9fb4ea}
+</style></head><body>
+<div class="rows">
+ <div class="row" style="width:300px"></div><div class="row" style="width:240px;margin-left:60px"></div>
+ <div class="row" style="width:280px;margin-left:20px"></div><div class="row" style="width:200px;margin-left:100px"></div>
+ <div class="row" style="width:300px"></div><div class="row" style="width:260px;margin-left:40px"></div>
+ <div class="row" style="width:220px;margin-left:80px"></div>
+</div>
+<div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="150" height="150">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3566d6"/>
+      <stop offset="1" stop-color="#1c3a91"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="56" fill="url(#bg)"/>
+
+  <!-- Order slip going into the archive box -->
+  <g>
+    <rect x="90" y="30" width="76" height="86" rx="8" fill="#ffffff"/>
+    <rect x="102" y="46" width="52" height="7" rx="3.5" fill="#3566d6"/>
+    <rect x="102" y="62" width="40" height="7" rx="3.5" fill="#9fb4ea"/>
+    <rect x="102" y="78" width="46" height="7" rx="3.5" fill="#9fb4ea"/>
+  </g>
+
+  <!-- Archive box: lid and body -->
+  <rect x="44" y="96" width="168" height="34" rx="9" fill="#ffffff"/>
+  <rect x="56" y="136" width="144" height="86" rx="10" fill="#ffffff"/>
+  <rect x="104" y="156" width="48" height="14" rx="7" fill="#1c3a91"/>
+
+  <!-- Restore badge -->
+  <circle cx="194" cy="194" r="44" fill="#1c3a91"/>
+  <circle cx="194" cy="194" r="37" fill="#1fbf75"/>
+  <path d="M 176.5 199 A 18 18 0 1 0 182 181" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round"/>
+  <path d="M 171 170 L 186 172 L 179 186 Z" fill="#ffffff" stroke="#ffffff" stroke-width="3" stroke-linejoin="round"/>
+</svg>
+</div>
+<div class="text">
+ <h1>Coldstash</h1>
+ <p class="sub">Archive old WooCommerce orders. Restore anytime.</p>
+ <p class="chips">Never deleted<span>·</span>Original order numbers<span>·</span>Analytics untouched</p>
+</div>
+</body></html>

@@ -1,0 +1,6 @@
+#!/bin/bash
+## Description: Run the Coldstash WP-CLI command (preview | run | status | restore | verify).
+## Usage: oa [flags]
+## Example: "ddev oa preview" or "ddev oa run --batch=100" or "ddev oa restore --all"
+
+wp coldstash "$@"

@@ -1,0 +1,32 @@
+# Exclude development files from the git archive / distributed package.
+/.ddev export-ignore
+/.github export-ignore
+/.claude export-ignore
+/.wordpress-org export-ignore
+/adr export-ignore
+/docs export-ignore
+/.editorconfig export-ignore
+/.gitignore export-ignore
+/.gitattributes export-ignore
+/.distignore export-ignore
+/.wp-env.json export-ignore
+/tests export-ignore
+/bin export-ignore
+/webpack.config.js export-ignore
+/phpcs.xml.dist export-ignore
+/phpstan.neon.dist export-ignore
+/phpunit.xml.dist export-ignore
+/wp-cli.yml export-ignore
+/CLAUDE.md export-ignore
+/README.md export-ignore
+/SETUP.md export-ignore
+
+
+# Line endings / diff.
+* text=auto eol=lf
+*.php diff=php
+*.zip binary
+*.mo binary
+*.png binary
+*.jpg binary
+*.gif binary

@@ -1,0 +1,63 @@
+{
+    "name": "narekzakarian/coldstash",
+    "type": "wordpress-plugin",
+    "description": "Archive old WooCommerce orders out of the live order tables — searchable, restorable, Analytics untouched.",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Narek Zakarian",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=8.1"
+    },
+    "require-dev": {
+        "antecedent/patchwork": "^2.1",
+        "brain/monkey": "^2.6",
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+        "phpcompatibility/phpcompatibility-wp": "^2.1",
+        "phpstan/phpstan": "^2.1",
+        "phpstan/phpstan-deprecation-rules": "^2.0",
+        "phpunit/phpunit": "^9.6",
+        "squizlabs/php_codesniffer": "^3.10",
+        "szepeviktor/phpstan-wordpress": "^2.0",
+        "woocommerce/woocommerce-sniffs": "^2.0",
+        "wp-coding-standards/wpcs": "^3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Coldstash\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Coldstash\\Tests\\": "tests/phpunit/"
+        }
+    },
+    "scripts": {
+        "phpcs": "@php ./vendor/bin/phpcs",
+        "phpcs:fix": "@php ./vendor/bin/phpcbf",
+        "phpstan": "@php ./vendor/bin/phpstan analyse --memory-limit=1G",
+        "phpunit": "@php ./vendor/bin/phpunit",
+        "smoke": "@php bin/smoke-test.php",
+        "test": [
+            "@phpcs",
+            "@phpstan",
+            "@phpunit",
+            "@smoke"
+        ]
+    },
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true,
+        "platform": {
+            "php": "8.1"
+        },
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

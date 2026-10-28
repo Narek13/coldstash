@@ -1,0 +1,36 @@
+# Dependencies
+/vendor/
+/node_modules/
+
+
+# Local tool overrides
+/phpcs.xml
+/phpunit.xml
+
+# Caches & temp
+/temp/
+*.log
+.phpunit.result.cache
+
+# DDEV's WordPress install (core is downloaded, not committed)
+/.ddev/wordpress
+# DDEV-generated router config and local mkcert certificates
+/.ddev/traefik/
+
+# Environment / secrets
+/.env*
+/auth.json
+
+# Claude Code: check in shared config, ignore personal/local overrides
+!/.claude
+*.local.json
+*.local.md
+
+# IDE & OS
+.DS_Store
+/.idea/
+/.vscode/
+
+# Release builds
+/dist/
+/.ddev/.seeded

@@ -1,0 +1,24 @@
+name: coldstash
+type: wordpress
+docroot: .ddev/wordpress
+php_version: "8.1"
+nodejs_version: "22"
+webserver_type: nginx-fpm
+xdebug_enabled: false
+database:
+    type: mariadb
+    version: "11.8"
+use_dns_when_possible: true
+composer_version: "2"
+hooks:
+    post-start:
+        - exec: .ddev/commands/setup.sh
+web_environment:
+    - WP_TITLE=Roastery Demo Store
+    - ADMIN_USER=admin
+    - ADMIN_PASS=admin
+    # Orders created on first provision so there is something to archive.
+    - SEED_ORDERS=300
+    - SEED_YEARS=4
+upload_dirs:
+    - wp-content/uploads

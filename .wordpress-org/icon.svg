@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3566d6"/>
+      <stop offset="1" stop-color="#1c3a91"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="56" fill="url(#bg)"/>
+
+  <!-- Order slip going into the archive box -->
+  <g>
+    <rect x="90" y="30" width="76" height="86" rx="8" fill="#ffffff"/>
+    <rect x="102" y="46" width="52" height="7" rx="3.5" fill="#3566d6"/>
+    <rect x="102" y="62" width="40" height="7" rx="3.5" fill="#9fb4ea"/>
+    <rect x="102" y="78" width="46" height="7" rx="3.5" fill="#9fb4ea"/>
+  </g>
+
+  <!-- Archive box: lid and body -->
+  <rect x="44" y="96" width="168" height="34" rx="9" fill="#ffffff"/>
+  <rect x="56" y="136" width="144" height="86" rx="10" fill="#ffffff"/>
+  <rect x="104" y="156" width="48" height="14" rx="7" fill="#1c3a91"/>
+
+  <!-- Restore badge -->
+  <circle cx="194" cy="194" r="44" fill="#1c3a91"/>
+  <circle cx="194" cy="194" r="37" fill="#1fbf75"/>
+  <path d="M 176.5 199 A 18 18 0 1 0 182 181" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round"/>
+  <path d="M 171 170 L 186 172 L 179 186 Z" fill="#ffffff" stroke="#ffffff" stroke-width="3" stroke-linejoin="round"/>
+</svg>

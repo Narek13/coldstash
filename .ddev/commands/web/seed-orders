@@ -1,0 +1,9 @@
+#!/bin/bash
+## Description: Create test WooCommerce orders spread over past years.
+## Usage: seed-orders [count] [years]
+## Example: "ddev seed-orders 1000 6"
+
+COUNT="${1:-300}"
+YEARS="${2:-4}"
+
+wp eval-file "${DDEV_DOCROOT}/wp-content/plugins/${DDEV_PROJECT}/bin/seed-orders.php" "${COUNT}" "${YEARS}"
