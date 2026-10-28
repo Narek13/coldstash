@@ -1,0 +1,29 @@
+name: Update WordPress.org readme & assets
+
+# Publishes readme.txt and .wordpress-org/ (banners, icons, screenshots) to
+# SVN without a new version. Code changes still need a tagged release.
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'readme.txt'
+      - '.wordpress-org/**'
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  update:
+    name: Push readme and assets to SVN
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Update readme and assets on WordPress.org
+        uses: 10up/action-wordpress-plugin-asset-update@stable
+        env:
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+          SLUG: coldstash
+          IGNORE_OTHER_FILES: true

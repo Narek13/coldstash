@@ -30,4 +30,7 @@ Repository secrets on GitHub (Settings → Secrets and variables → Actions):
 both banners and `screenshot-1..4.png` (captions are `== Screenshots ==` in
 readme.txt). The sources to re-render them are in `docs/wporg-assets-source/`.
 
-Changes to `readme.txt` or assets alone ship with the next tagged release.
+Changes to `readme.txt` or `.wordpress-org/` alone go out without a release:
+pushing them to `main` runs `.github/workflows/wporg-readme-assets.yml`, which
+updates the readme in SVN `trunk/` and the stable tag, and syncs `assets/`.
+Do not bump the version for those.

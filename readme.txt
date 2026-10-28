@@ -1,6 +1,6 @@
 === Coldstash – Archive Old Orders for WooCommerce ===
 Contributors: nareknovembit
-Tags: woocommerce, archive orders, old orders, database cleanup, hpos
+Tags: archive orders, old orders, order cleanup, database cleanup, woocommerce
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 8.1
@@ -14,7 +14,7 @@ Archive old WooCommerce orders out of the live order tables. Restore any order a
 
 **Coldstash archives old WooCommerce orders without deleting them.** Completed orders from years ago move out of the live order tables into archive tables in the same database. You can still search them, open them read-only, and restore any of them with its original order number.
 
-Orders are the fastest-growing data in a WooCommerce store. Every sale adds order rows, line items, item meta and order notes, and years of history make the live order tables large, which is what every order query, order screen and migration has to work through. Deleting old orders is the usual cleanup advice, but it loses history your accounting, customers and support may still need. Coldstash is the middle ground: a smaller set of live orders, and the old ones safely kept.
+Orders are the fastest-growing data in a WooCommerce store. Every sale adds order rows, line items, item meta and order notes, and years of history make the live order tables large, which is what every order query, order screen and migration has to work through. Deleting old orders is the usual cleanup advice, but it loses history your accounting, customers and support may still need. Coldstash is the middle ground: a smaller set of live orders, and the old ones safely kept. If you came here looking for a way to bulk delete old WooCommerce orders, archiving gets you the cleanup without the risk.
 
 **Who it is for**
 
@@ -54,6 +54,14 @@ Archiving runs in the background with Action Scheduler, in small batches, and ca
 = How do I clean up old WooCommerce orders without deleting them? =
 
 Install Coldstash, choose how old an order must be (24 months by default, at least 12) and which statuses to archive, then click "Start archiving". Old orders move into archive tables in the same database, and you can restore any of them at any time.
+
+= Should I delete old WooCommerce orders or archive them? =
+
+Archive them. Deleting shrinks the order tables too, but it is permanent: the order history your accounting, tax records, customer support and repeat customers rely on is gone. Archiving moves old orders out of the live tables just as effectively, and any of them can come back with its original order number.
+
+= Will it make WooCommerce faster? =
+
+It depends on what is slow. With HPOS, WooCommerce's order screens are already fast at large sizes. What grows without limit is the order meta, line item and order note tables, and that is what anything joining order data has to work through: exports, custom reports and integrations. Archiving keeps those live tables at the size of your recent orders. It does not speed up the storefront, and it does not shrink the database as a whole.
 
 = Does this delete my orders? =
 
